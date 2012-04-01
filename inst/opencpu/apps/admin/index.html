@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<base target="_blank" />
+		<title> Install R packages </title>		
+	</head>
+	
+	<body>
+	
+		<h1> Admin Tools </h1>
+		
+		<h3> Install R package </h3>
+		
+			<form enctype="multipart/form-data" action="/Radmin/call/opencpu.demo/install.opencpu/json" method="POST">
+				
+				<fieldset>
+					<!-- Library: <input type="text" name="lib" value="'/mnt/export/opencpu-admin-library'"/><br /> -->
+					Source package file: <input name="!file:pkgs" type="file" /><br /> 
+					<input type="submit" value="Upload Package" />
+				</fieldset>
+			
+			</form>
+		
+	</body>
+</html>
+			

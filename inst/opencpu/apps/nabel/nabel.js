@@ -15,7 +15,7 @@ $(function() {
 		if(hashkey){
 			$("#plotimg").attr("src","spinner.gif");
 			setTimeout(function(){ 
-				$("#plotimg").attr("src", "/R/store" + hashkey + "/png?!width=" + width + "&!height=" + height);
+				$("#plotimg").attr("src", "/R/store/tmp/" + hashkey + "/png?!width=" + width + "&!height=" + height);
 			}, 10);
 		}
 	}
@@ -23,7 +23,7 @@ $(function() {
 	//this function does the same for PDF.
 	var getpdf = function(){
 		if(hashkey){
-			window.open("/R/store" + hashkey + "/pdf");
+			window.open("/R/store/tmp/" + hashkey + "/pdf");
 		}
 		return false;
 	}

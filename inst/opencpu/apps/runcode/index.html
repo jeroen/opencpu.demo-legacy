@@ -23,13 +23,13 @@ Please do have a look at the html code of the forms below to understand what is 
 <form enctype="multipart/form-data" action="/R/call/base/identity/json" method="POST"> 
 
 <textarea name="x" rows="12" cols="80">
-{
-	total <- 0;
-	for(i in 1:100){
-	  total <- total + i^2;
-	}	
-	total;
-}
+
+total <- 0;
+for(i in 1:100){
+  total <- total + i^2;
+}	
+total;
+
 </textarea>	
 
 <br />
@@ -46,10 +46,10 @@ Please do have a look at the html code of the forms below to understand what is 
 <form enctype="multipart/form-data" action="/R/call/base/identity/png" method="POST"> 
 
 <textarea name="x" rows="12" cols="80">
-{
-	x <- rnorm(1000)
-	print(hist(x))
-}
+
+x <- rnorm(1000)
+print(hist(x))
+
 
 </textarea>	
 
@@ -67,12 +67,11 @@ Please do have a look at the html code of the forms below to understand what is 
 <form enctype="multipart/form-data" action="/R/call/base/identity/save" method="POST"> 
 
 <textarea name="x" rows="12" cols="80">
-{
-	x <- rnorm(1000)
-	print(hist(x))
-	mymean <- mean(x)
-	mean
-}
+
+x <- rnorm(1000)
+print(hist(x))
+mymean <- mean(x)
+mean
 
 </textarea>	
 
