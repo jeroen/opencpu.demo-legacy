@@ -1,12 +1,15 @@
-install.opencpu <- function(pkgs, lib="/mnt/export/opencpu-admin-library"){
+install.verbose <- function(pkgs, lib=.libPaths()[1]){
 
+	#one package at the time
+	if(length(pkgs) != 1){
+		stop("pkgs is not of length 1: ", pkgs);
+	}
+	
 	#package name instead of file
 	if(!file.exists(pkgs)){
 		pkgs <- download.packages(pkgs=pkgs, destdir=tempdir())[,2];
 	}
-	if(length(pkgs) != 1){
-		stop("pkgs is not of length 1: ", pkgs);
-	}
+
 	
 	#build command
 	cmd <- "R CMD INSTALL"

@@ -18,10 +18,3 @@ Suggests:
     lattice,
     ggplot2,
     quantmod
-Collate:
-    'install.opencpu.R'
-    'liveplot.R'
-    'makefunction.R'
-    'nabel.R'
-    'Rollcorr.R'
-    'testplothandlers.R'

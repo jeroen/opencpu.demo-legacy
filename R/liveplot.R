@@ -26,5 +26,5 @@ liveplot <- function (ticker)
 	myplot <- ggplot2::qplot(Date, Close, data = mydata, geom = c("line", 
 					"smooth"), main = ticker)
 	print(myplot)
-	return(NULL);
+	invisible();
 }
