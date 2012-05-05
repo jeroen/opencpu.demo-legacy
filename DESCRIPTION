@@ -18,3 +18,11 @@ Suggests:
     lattice,
     ggplot2,
     quantmod
+Collate:
+    'gitstats.R'
+    'install.verbose.R'
+    'liveplot.R'
+    'makefunction.R'
+    'nabel.R'
+    'Rollcorr.R'
+    'testplothandlers.R'

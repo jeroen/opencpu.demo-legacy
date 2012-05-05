@@ -1,3 +1,4 @@
+export(gitstats)
 export(liveplot)
 export(makefunction)
 export(nabel)

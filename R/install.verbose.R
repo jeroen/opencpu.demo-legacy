@@ -7,9 +7,8 @@ install.verbose <- function(pkgs, lib=.libPaths()[1]){
 	
 	#package name instead of file
 	if(!file.exists(pkgs)){
-		pkgs <- download.packages(pkgs=pkgs, destdir=tempdir())[,2];
+		pkgs <- download.packages(pkgs=pkgs, destdir=tempdir(), cacheOK=FALSE)[,2];
 	}
-
 	
 	#build command
 	cmd <- "R CMD INSTALL"
