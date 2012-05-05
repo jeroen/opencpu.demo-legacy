@@ -10,19 +10,15 @@ Description: Some demo R functions and apps for the OpenCPU framework. See
 Version: 0.4-10
 Date: 2012-02-07
 URL: http://www.opencpu.org
-Imports:
-    lattice,
-    ggplot2,
-    httpRequest
 Suggests:
     lattice,
     ggplot2,
-    quantmod
-Collate:
-    'gitstats.R'
-    'install.verbose.R'
-    'liveplot.R'
-    'makefunction.R'
-    'nabel.R'
-    'Rollcorr.R'
-    'testplothandlers.R'
+    quantmod,
+    plyr,
+    reshape2,
+    lattice,
+    ggplot2,
+    httpRequest,
+    RCurl,
+    RJSONIO,
+    mgcv
