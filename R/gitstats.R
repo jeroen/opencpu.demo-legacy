@@ -11,7 +11,7 @@ gitstats <- function (id = "hadley", type = "user")
     #ggplot is easier to load.
     require(ggplot2);
 	
-	if (type == "user") {
+    if (type == "user") {
         url = "https://api.github.com/users/"
     }
     else if (type == "org") {
