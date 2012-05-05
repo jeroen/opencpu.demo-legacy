@@ -8,10 +8,10 @@
 #' @export
 gitstats <- function (id = "hadley", type = "user") 
 {
-	#ggplot is easier to load.
-	require(ggplot2);
+    #ggplot is easier to load.
+    require(ggplot2);
 	
-    if (type == "user") {
+	if (type == "user") {
         url = "https://api.github.com/users/"
     }
     else if (type == "org") {
@@ -37,9 +37,9 @@ gitstats <- function (id = "hadley", type = "user")
     repoorder <- unique(out2[order(out2$value, decreasing = FALSE), 
         ][, 1])
     out2$Repo <- factor(out2$Repo, levels = repoorder)
-	myplot <- ggplot(out2, aes(Repo, value)) + geom_bar() + coord_flip() + 
-			facet_wrap(~variable) + theme_bw(base_size = 18)
-	print(myplot)
-	invisible();
+    myplot <- ggplot(out2, aes(Repo, value)) + geom_bar() + coord_flip() + 
+        facet_wrap(~variable) + theme_bw(base_size = 18)
+    print(myplot)
+    invisible();
 }
 
