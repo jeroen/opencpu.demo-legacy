@@ -14,7 +14,7 @@ altmetrics <- function (diggname = "cboettig", gitid = 'cboettig',
     require(ggplot2); require(RCurl); require(RJSONIO); require(plyr)
 	
     diggs <- digg_user(usernames = diggname)
-    gits <- gitstats(id=gitid, type=gittype)
+    gits <- git_wf(id=gitid, type=gittype)
     diggs_ <- data.frame(names(diggs), diggs[[1]])
     names(diggs_) <- c("metric","value")
     gits_ <- data.frame(names(gits), gits)
@@ -30,20 +30,14 @@ altmetrics <- function (diggname = "cboettig", gitid = 'cboettig',
 #' 
 #' Given a single or multiple Digg usernames or user ID's, returns for each
 #'  number of diggs, comments, followers, following, and submissions.
-#' @import RCurl RJSONIO
 #' @param usernames Comma separated list of usernames (e.g., 'kevinrose,leolaporte').
 #' @param userids Comma separated list of user IDs (e.g., '59,60').
 #' @param url The base Digg url (leave to default).
 #' @param ... optional additional curl options (debugging tools mostly)
 #' @param curl If using in a loop, call getCurlHandle() first and pass 
 #'  the returned value in here (avoids unnecessary footprint)
-#' @return A data.frame with results.
-#' @details Only supply one or the other of usernames or userids.
+#' @author Scott Chamberlain
 #' @export
-#' @examples \dontrun{
-#' digg_user(usernames = 'kevinrose,leolaporte')
-#' digg_user(userids = '59,60')
-#' }
 digg_user <- function(usernames = NA, userids = NA,
       url = "http://services.digg.com/2.0/user.getInfo", 
       ..., curl = getCurlHandle())
@@ -64,15 +58,15 @@ digg_user <- function(usernames = NA, userids = NA,
   out
 }
 
-#' Plot github stats
+#' Get github stats (watchers and forks).
 #' 
-#' This function plots the total number of forks and followers for all repositories of a certain user or organization.
+#' This function gets watchers and forks of github repos for a user or organization.
 #' 
 #' @param id name of the github user or organization
 #' @param type either "user" or "org"
 #' @author Scott Chamberlain
 #' @export
-gitstats <- function (id = "hadley", type = "user") 
+git_wf <- function (id = "hadley", type = "user") 
 {
   
   if (type == "user") {
