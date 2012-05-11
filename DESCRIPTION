@@ -22,3 +22,12 @@ Suggests:
     RCurl,
     RJSONIO,
     mgcv
+Collate:
+    'Rollcorr.R'
+    'altmetrics.R'
+    'gitstats.R'
+    'install.verbose.R'
+    'liveplot.R'
+    'makefunction.R'
+    'nabel.R'
+    'testplothandlers.R'
