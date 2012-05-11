@@ -22,21 +22,12 @@
   first and pass the returned value in here (avoids
   unnecessary footprint)}
 }
-\value{
-  A data.frame with results.
-}
 \description{
   Given a single or multiple Digg usernames or user ID's,
   returns for each number of diggs, comments, followers,
   following, and submissions.
 }
-\details{
-  Only supply one or the other of usernames or userids.
-}
-\examples{
-\dontrun{
-digg_user(usernames = 'kevinrose,leolaporte')
-digg_user(userids = '59,60')
-}
+\author{
+  Scott Chamberlain
 }
 
