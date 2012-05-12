@@ -2,8 +2,8 @@
 \alias{altmetrics}
 \title{Plot altmetrics}
 \usage{
-  altmetrics(diggname = "cboettig", gitid = "cboettig",
-    gittype = "user")
+  altmetrics(diggname = list("cboettig", "lo0ol"),
+    gitid = list("cboettig", "holman"), gittype = "user")
 }
 \arguments{
   \item{diggname}{Digg username}
