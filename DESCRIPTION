@@ -7,8 +7,8 @@ Type: Package
 Author: Jeroen Ooms and others as specified in the manual page.
 Description: Some demo R functions and apps for the OpenCPU framework. See
     http://www.opencpu.org for more details.
-Version: 0.4-10
-Date: 2012-02-07
+Version: 0.7-0
+Date: 2012-05-15
 URL: http://www.opencpu.org
 Suggests:
     lattice,
@@ -23,11 +23,12 @@ Suggests:
     RJSONIO,
     mgcv
 Collate:
-    'Rollcorr.R'
     'altmetrics.R'
     'gitstats.R'
     'install.verbose.R'
+    'knithtml.R'
     'liveplot.R'
     'makefunction.R'
     'nabel.R'
+    'Rollcorr.R'
     'testplothandlers.R'

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>OpenCPU knitr app</title>
+
+<script src="jquery-latest.js"> </script>
+
+<!-- MathJax scripts -->
+<script
+	src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="knitapp.js"> </script>
+
+
+<link
+	href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link
+	href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css"
+	rel="stylesheet">
+<link href="knitapp.css" rel="stylesheet">
+
+<script src="highlight.js"> </script>
+<script src="base64.js"> </script>
+
+
+
+
+</head>
+
+
+<body>
+
+	<div class="page-header">
+		<h1>
+			R Markdown App <small>knit in the cloud...</small>
+		</h1>
+	</div>
+
+
+
+	<div class="container">
+
+		<div class="row">
+			<div class="span6">
+
+
+				<form>
+					<textarea id="knittext"> bla </textarea>
+					<div>
+						<a class="btn" id="knit"><i class="icon-circle-arrow-right"></i>
+							Convert</a>
+						<a class="btn disabled" id="publish"><i class="icon-circle-arrow-right"></i>
+							Publish</a>							
+					</div>
+				</form>
+			</div>
+			<div class="span6">
+
+				<!-- the knitting result will be rendered inside this div -->
+				<div id="result"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
