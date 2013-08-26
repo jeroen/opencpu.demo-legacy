@@ -1,6 +1,3 @@
-DEPRECATED
-==========
+This package is DEPRECATED. The OpenCPU API has changed and examples in this package will no longer work.
 
-This package is deprecated. The OpenCPU API has changed and examples in this package will no longer work.
-
-Visit the [opencpu website](http://opencpu.org) for the latest documentation and examples
+Visit the opencpu website at http://opencpu.org for the latest documentation and examples.
